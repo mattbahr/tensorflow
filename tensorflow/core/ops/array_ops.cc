@@ -2054,8 +2054,7 @@ Status PadGradShapeFn(InferenceContext* c) {
   int64_t input_rank = c->Value(pad_0);
   ShapeHandle input;
   TF_RETURN_IF_ERROR(c->WithRank(c->input(0), input_rank, &input));
-  TF_RETURN_IF_ERROR(
-      c->Merge(paddings, c->Matrix(input_rank, 2), &paddings));
+  TF_RETURN_IF_ERROR(c->Merge(paddings, c->Matrix(input_rank, 2), &paddings));
 
   const Tensor* paddings_t = c->input_tensor(1);
   if (paddings_t == nullptr) {
@@ -2071,7 +2070,7 @@ Status PadGradShapeFn(InferenceContext* c) {
   } else {
     return MirrorPadKnown<int64_t>(c, input, paddings_t, input_rank);
   }
-} 
+}
 
 }  // namespace
 

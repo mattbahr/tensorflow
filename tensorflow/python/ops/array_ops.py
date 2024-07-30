@@ -3210,7 +3210,8 @@ def pad_v2(tensor, paddings, mode="CONSTANT", constant_values=0, name=None):
   Args:
     tensor: A `Tensor`.
     paddings: A `Tensor` of type `int32`.
-    mode: One of "CONSTANT", "REFLECT", "SYMMETRIC", or "WRAP" (case-insensitive)
+    mode: One of "CONSTANT", "REFLECT", "SYMMETRIC", or "WRAP" 
+      (case-insensitive)
     constant_values: In "CONSTANT" mode, the scalar pad value to use. Must be
       same type as `tensor`.
     name: A name for the operation (optional).
@@ -3219,7 +3220,8 @@ def pad_v2(tensor, paddings, mode="CONSTANT", constant_values=0, name=None):
     A `Tensor`. Has the same type as `tensor`.
 
   Raises:
-    ValueError: When mode is not one of "CONSTANT", "REFLECT", "SYMMETRIC", or "WRAP".
+    ValueError: When mode is not one of "CONSTANT", "REFLECT", "SYMMETRIC", or 
+      "WRAP".
   """
   return pad(tensor, paddings, mode, name, constant_values)
 
@@ -3274,7 +3276,8 @@ def pad(tensor, paddings, mode="CONSTANT", name=None, constant_values=0):  # pyl
   Args:
     tensor: A `Tensor`.
     paddings: A `Tensor` of type `int32`.
-    mode: One of "CONSTANT", "REFLECT", "SYMMETRIC", or "WRAP" (case-insensitive)
+    mode: One of "CONSTANT", "REFLECT", "SYMMETRIC", or "WRAP" 
+      (case-insensitive)
     name: A name for the operation (optional).
     constant_values: In "CONSTANT" mode, the scalar pad value to use. Must be
       same type as `tensor`.
@@ -3283,7 +3286,8 @@ def pad(tensor, paddings, mode="CONSTANT", name=None, constant_values=0):  # pyl
     A `Tensor`. Has the same type as `tensor`.
 
   Raises:
-    ValueError: When mode is not one of "CONSTANT", "REFLECT", "SYMMETRIC", or "WRAP".
+    ValueError: When mode is not one of "CONSTANT", "REFLECT", "SYMMETRIC", or 
+      "WRAP".
   """
 
   # Convert lower/mixed case to upper for NumPy compatibility
