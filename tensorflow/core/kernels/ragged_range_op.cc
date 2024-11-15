@@ -141,7 +141,9 @@ class RaggedRangeOp : public OpKernel {
       T delta = broadcast_deltas ? deltas(0) : deltas(row);
       for (SPLITS_TYPE i = 0; i < row_size; ++i) {
         rt_dense_values(value_index++) = T(value);
-        value += delta;
+        if (i < row_size - 1) {
+          value += delta;
+        }
       }
     }
   }
